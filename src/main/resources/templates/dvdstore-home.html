@@ -1,0 +1,25 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Dvdstore home</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>Add movie</h1>
+<p><a href="/webui/add-movie-form">Create a movie</a> </p>
+<h1>List of movies</h1>
+<section class="container">
+    <div class="left-half">
+        <article id="movie-list">
+
+        </article>
+    </div>
+    <div class="right-half">
+        <article id="movie-detail">
+
+        </article>
+    </div>
+</section>
+</body>
+<script th:src="@{/js/script.js}"></script>
+
+</html>
