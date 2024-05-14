@@ -1,5 +1,6 @@
 package com.onsaatech.dvdstore.web.controller;
 
+import com.onsaatech.dvdstore.entity.Actor;
 import com.onsaatech.dvdstore.entity.Movie;
 import com.onsaatech.dvdstore.service.MovieServiceInterface;
 import com.onsaatech.dvdstore.web.form.MovieForm;
@@ -29,10 +30,14 @@ public class MovieController {
         if (bindingResult.hasErrors()){
             return "add-movie-form";
         }
+        Actor actor = new Actor();
+        actor.setFirstName(movieForm.getFirstName());
+        actor.setLastName(movieForm.getLastName());
         Movie movie = new Movie();
         movie.setGenre(movieForm.getGenre());
         movie.setTitle(movieForm.getTitle());
         movie.setDescription(movieForm.getDescription());
+        movie.setMainActor(actor);
         movieService.registerMovie(movie);
         return "movie-added";
     }

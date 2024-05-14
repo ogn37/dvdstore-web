@@ -22,6 +22,12 @@
     <p>Description <textarea rows="4" cols="50" th:field="*{description}"/>
     <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
     </p>
+    <p>First Name <input type="text" th:field="*{firstName}"/>
+    <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+    </p>
+    <p>Last Name <input type="text" th:field="*{lastName}"/>
+    <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+    </p>
     <input type="submit" value="Add" />
 
 </form>
